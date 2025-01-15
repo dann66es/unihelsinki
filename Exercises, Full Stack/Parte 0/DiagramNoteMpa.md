@@ -1,4 +1,4 @@
-# Diagram New_Notes.
+# Diagram NewNotes (MPA).
 
 ```mermaid
 sequenceDiagram
