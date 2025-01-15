@@ -1,4 +1,4 @@
-# Diagrama de SPA
+# Diagram SPA (access as user)
 
 
 ```mermaid
@@ -9,10 +9,14 @@ sequenceDiagram
     participant ContentTypeHeader
     participant Database
 
-    User->>Browser: Fills out the form and clicks "Submit"
-    Browser->>Server: Sends HTTP POST request to /new_note_spa
-    ContentTypeHeader->>S: Data is in JSON format
-    Server->>DataBase: Saves the new note as JSON
-    DataBase-->>Server: Save confirmation
-    Server-->>Browser: Responds with HTTP 201 Created (no redirection)
-    Browser-->>Browser: Stays on the same page without sending additional HTTP requests
+    User->>Browser: Navigates to https://studies.cs.helsinki.fi/exampleapp/spa
+    Browser->>Server: Requests index.html
+    Server->>Browser: Responds with index.html
+    Browser->>Server: Requests main.css
+    Server->>Browser: Responds with main.css
+    Browser->>Server: Requests spa.js
+    Server->>Browser: Responds with spa.js
+    Browser->>Server: Requests data.json
+    Server->>Browser: Responds with data.json (list of notes)
+    
+

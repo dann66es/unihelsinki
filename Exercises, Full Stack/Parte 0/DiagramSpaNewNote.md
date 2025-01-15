@@ -1,4 +1,4 @@
-# Diagrama de SPA (creating new Note)
+# Diagram SPA (creating new Note)
 
 
 ```mermaid
