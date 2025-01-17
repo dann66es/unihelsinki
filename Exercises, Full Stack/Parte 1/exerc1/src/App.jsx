@@ -1,5 +1,7 @@
 const Header = ({course}) => <h1>{course}</h1>;
 
+  console.log(Header);
+
   const Content = ({parts}) => (
     <div>
       {parts.map((part, index ) => (
