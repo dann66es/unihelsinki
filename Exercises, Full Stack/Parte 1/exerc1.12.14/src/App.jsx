@@ -14,8 +14,7 @@ const App = () => {
 
   const [selected, setSelected] = useState(0)
   const [votes, setVotes] = useState(new Array(anecdotes.length).fill(0))
-  
-  
+ 
   const handleAnecdote = () => {
 
       const nextIndex = (selected + 1) % anecdotes.length;
@@ -24,7 +23,7 @@ const App = () => {
     }
 
   const handleVote = () => {
-    const newVotes = [...votes]
+    const newVotes = [...votes]  
     newVotes[selected] += 1 
     setVotes(newVotes)
 
@@ -46,6 +45,11 @@ const App = () => {
 
   const mostVoted = getMostVotedAnecdote()
 
+  
+
+  
+
+
   return (
     <div>
       
@@ -53,8 +57,7 @@ const App = () => {
       <p>{anecdotes[selected]}</p>
       <p>Has {votes[selected]} Votes</p>
       <button onClick={handleVote}>Vote</button>
-      <button onClick={handleAnecdote}>Next Anecdote</button>
-      
+      <button onClick={handleAnecdote}>Next Anecdote</button> 
       <h2>Anecdote with most votes</h2>
       <p>{mostVoted.text}</p>
       <p>tiene {mostVoted.votes} votos</p>
